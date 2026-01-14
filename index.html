@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurum | Digital Identity Redefined</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c4a74f",
+                        "primary-hover": "#d4bc74",
+                        "background-dark": "#0A0A0A",
+                        "platinum": "#e5e4e2",
+                        "aurum-ivory": "#F5F5F5",
+                        "aurum-silver": "#BFC2C7",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'card-shine': 'cardShine 4s cubic-bezier(0.4, 0, 0.2, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        cardShine: {
+                            '0%': { transform: 'translateX(-200%) skewX(-30deg)' },
+                            '15%': { transform: 'translateX(-200%) skewX(-30deg)' },
+                            '45%': { transform: 'translateX(300%) skewX(-30deg)' },
+                            '100%': { transform: 'translateX(300%) skewX(-30deg)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        :root { color-scheme: dark; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background-color: #0A0A0A;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #c4a74f33; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c4a74f66; }
+        .custom-cursor-area { cursor: none; }
+        @media (max-width: 1024px) { .custom-cursor-area { cursor: auto; } }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-dark text-white custom-cursor-area">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
