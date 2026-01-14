@@ -4,7 +4,7 @@
 Welcome to the **Aurum Collective** digital presence. This project is a high-end, production-ready React application built with TypeScript and Tailwind CSS, designed to represent the pinnacle of digital identity and luxury.
 
 # Preview
-![Preview](unnamed (1).png)
+![Preview](https://github.com/Web-Designer-Rohan/Aurum-Luxury-Card---Digital-Identity/blob/main/unnamed%20(1).png)
 
 ## 🌟 Key Features
 
