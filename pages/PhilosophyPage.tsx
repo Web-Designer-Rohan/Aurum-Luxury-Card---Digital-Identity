@@ -56,12 +56,12 @@ const PhilosophyPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 relative">
           <div className="hidden md:block absolute top-[11px] left-0 w-full h-[1px] bg-white/5"></div>
           {TIMELINE.map((step, idx) => (
-            <div key={idx} className="flex flex-col items-center md:items-start relative pb-16 px-4">
-              <div className={`size-6 rounded-full mb-8 z-10 flex items-center justify-center ${step.status === 'completed' ? 'bg-primary' : 'border border-primary bg-background-dark'}`}>
+            <div key={idx} className="flex flex-col items-center md:items-start relative pb-16 px-4 group interactive">
+              <div className={`size-6 rounded-full mb-8 z-10 flex items-center justify-center transition-all duration-500 ${step.status === 'completed' ? 'bg-primary group-hover:scale-125' : 'border border-primary bg-background-dark group-hover:bg-primary/20'}`}>
                 {step.status === 'completed' && <div className="size-1.5 rounded-full bg-background-dark"></div>}
               </div>
               <span className="text-primary font-bold text-[10px] tracking-[0.4em] uppercase mb-3">{step.year}</span>
-              <h4 className="text-xl font-bold mb-4 tracking-tight">{step.title}</h4>
+              <h4 className="text-xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">{step.title}</h4>
               <p className="text-white/30 text-[13px] leading-relaxed max-w-[240px] text-center md:text-left font-light">{step.description}</p>
             </div>
           ))}
@@ -71,7 +71,7 @@ const PhilosophyPage: React.FC = () => {
       {/* Visual Break */}
       <section className="max-w-[1440px] mx-auto pb-48">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="aspect-[16/10] overflow-hidden rounded-3xl bg-white/5 group">
+          <div className="aspect-[16/10] overflow-hidden rounded-3xl bg-white/5 group interactive">
             <img 
               className="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100" 
               alt="Luxury minimal architecture" 
@@ -91,10 +91,10 @@ const PhilosophyPage: React.FC = () => {
 };
 
 const ManifestoItem = ({ icon, title, desc }: { icon: string, title: string, desc: string }) => (
-  <div className="group">
+  <div className="group interactive pl-4 border-l border-transparent hover:border-primary/20 transition-all duration-500">
     <div className="flex items-center gap-5 mb-6">
-      <span className="material-symbols-outlined text-primary text-3xl transition-transform group-hover:scale-110">{icon}</span>
-      <h3 className="text-2xl font-bold tracking-tight">{title}</h3>
+      <span className="material-symbols-outlined text-primary text-3xl transition-transform duration-500 group-hover:scale-110">{icon}</span>
+      <h3 className="text-2xl font-bold tracking-tight group-hover:text-primary transition-colors">{title}</h3>
     </div>
     <p className="text-white/30 leading-relaxed font-light">{desc}</p>
   </div>

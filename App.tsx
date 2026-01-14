@@ -10,7 +10,6 @@ import { PageType } from './types';
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<PageType>('HOME');
 
-  // Scroll to top on page change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPage]);

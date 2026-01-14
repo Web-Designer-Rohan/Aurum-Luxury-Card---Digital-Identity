@@ -17,14 +17,13 @@ const ContactPage: React.FC = () => {
           {CONTACT_LINKS.map((link) => (
             <a 
               key={link.id}
-              className="group flex items-center justify-between w-full max-w-4xl border-b border-white/5 py-10 px-4 transition-all duration-500 hover:px-8" 
+              className="group flex items-center justify-between w-full max-w-4xl border-b border-white/5 py-10 px-4 transition-all duration-500 hover:px-8 interactive hover:bg-white/[0.01]" 
               href={link.url}
             >
               <div className="flex items-center gap-10">
-                <span className="text-white/20 text-xs font-bold tracking-[0.3em]">{link.id}</span>
+                <span className="text-white/20 text-xs font-bold tracking-[0.3em] transition-colors group-hover:text-primary">{link.id}</span>
                 <span className="text-4xl md:text-6xl font-light text-white tracking-tight relative transition-all group-hover:text-primary">
                   {link.label}
-                  <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-primary transition-all duration-500 group-hover:w-full"></span>
                 </span>
               </div>
               <div className="w-16 h-16 rounded-full border border-white/5 flex items-center justify-center transition-all duration-500 group-hover:bg-primary group-hover:border-primary group-hover:rotate-45">
@@ -45,9 +44,9 @@ const ContactPage: React.FC = () => {
 };
 
 const InfoCard = ({ title, detail, isLink }: { title: string, detail: string, isLink?: boolean }) => (
-  <div className="space-y-4 text-center md:text-left">
+  <div className="space-y-4 text-center md:text-left interactive p-2 rounded-lg hover:bg-white/[0.02] transition-colors">
     <p className="text-[10px] text-primary uppercase font-bold tracking-[0.4em]">{title}</p>
-    <p className={`text-sm font-light text-white/40 tracking-wide ${isLink ? 'underline underline-offset-8 decoration-white/10 hover:text-white transition-colors cursor-pointer' : ''}`}>
+    <p className={`text-sm font-light text-white/40 tracking-wide ${isLink ? 'underline underline-offset-8 decoration-white/10 hover:text-white transition-colors cursor-pointer hover:decoration-primary' : ''}`}>
       {detail}
     </p>
   </div>
