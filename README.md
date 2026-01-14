@@ -3,6 +3,9 @@
 
 Welcome to the **Aurum Collective** digital presence. This project is a high-end, production-ready React application built with TypeScript and Tailwind CSS, designed to represent the pinnacle of digital identity and luxury.
 
+# Preview
+![Preview](unnamed.png)
+
 ## 🌟 Key Features
 
 - **Minimalist Aesthetic**: Inspired by modern grotesk typography and high-end horology.
